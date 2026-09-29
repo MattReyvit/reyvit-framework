@@ -1,0 +1,35 @@
+/* Reyvit Framework — G1/G2 Diseño por tokens
+   Patrón real: colores, gradientes y tipografías viven en el CSS global
+   y se consumen por variantes semánticas. Nunca colores fijos en componentes. */
+
+@theme {
+  /* Superficies */
+  --color-background: oklch(0.99 0.002 250);
+  --color-surface: oklch(0.96 0.005 250);
+  --color-foreground: oklch(0.2 0.02 250);
+
+  /* Marca */
+  --color-primary: oklch(0.55 0.18 250);
+  --color-primary-foreground: oklch(0.99 0.002 250);
+  --color-accent: oklch(0.7 0.15 160);
+
+  /* Estados */
+  --color-success: oklch(0.65 0.16 150);
+  --color-warning: oklch(0.75 0.15 80);
+  --color-destructive: oklch(0.6 0.2 25);
+
+  /* Tipografía */
+  --font-heading: "Sora", sans-serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Radios y sombras semánticas */
+  --radius-card: 0.75rem;
+  --shadow-elevated: 0 8px 24px oklch(0.2 0.02 250 / 0.08);
+}
+
+/* Los componentes consumen los tokens, nunca valores literales: */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-elevated);
+}
