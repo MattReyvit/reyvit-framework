@@ -1,0 +1,34 @@
+flowchart TD
+    A[Idea / PRD / Change request] --> B[G1 · Planning & Design]
+    B --> C[G2 · UX/UI & SEO]
+    C --> D[G3 · Frontend / Backend]
+    D --> E[G4 · Operations & Compliance]
+    E --> F[Delivery & Launch]
+    F --> G[Log & Learnings]
+    G -. feeds back .-> B
+
+    subgraph G1D[G1 · Planning & Design]
+        B1[Scope & goals]
+        B2[PRD template]
+        B3[Data model draft]
+    end
+    subgraph G2D[G2 · UX/UI & SEO]
+        C1[Design tokens]
+        C2[Technical SEO checklist]
+        C3[E-E-A-T & JSON-LD]
+    end
+    subgraph G3D[G3 · Frontend / Backend]
+        D1[Routes & endpoints]
+        D2[Tables, RLS, triggers]
+        D3[API keys as secrets]
+    end
+    subgraph G4D[G4 · Operations & Compliance]
+        E1[Legal & privacy]
+        E2[Security audit lite]
+        E3[Performance & rate limits]
+    end
+
+    B --- G1D
+    C --- G2D
+    D --- G3D
+    E --- G4D
