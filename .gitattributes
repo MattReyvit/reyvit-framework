@@ -1,2 +1,3 @@
 diagrams/*.png linguist-generated
-examples/rls-leads.sql linguist-language=PLpgSQL linguist-detectable
+examples/** linguist-documentation=false
+*.sql linguist-language=PLpgSQL linguist-detectable
